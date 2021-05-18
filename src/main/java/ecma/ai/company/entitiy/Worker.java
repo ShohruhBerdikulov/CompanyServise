@@ -30,7 +30,7 @@ public class Worker {
     @NotNull(message = "address bo'sh bo'lmasin!")
     private Address address;
 
-    @OneToOne
+    @ManyToOne
     @NotNull(message = "department bo'sh bo'lmasin!")
     private Department department;
 
