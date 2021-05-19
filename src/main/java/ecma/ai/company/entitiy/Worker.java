@@ -27,6 +27,7 @@ public class Worker {
 
     //not unique. Maybe have 2 workers in one home.
     @OneToOne
+    @NotBlank(message = "address malumotlari mavjud emas!")
     @NotNull(message = "address bo'sh bo'lmasin!")
     private Address address;
 
