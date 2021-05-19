@@ -5,6 +5,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 
 //Company(corpName, directorName, Address)
@@ -25,6 +26,7 @@ public class Company {
     private String directorName;
 
     @OneToOne
+    @NotBlank(message = "address qo'shilmadi")
     @NotNull(message = "address bo'sh bo'lmasin!")
     private Address address;
 
