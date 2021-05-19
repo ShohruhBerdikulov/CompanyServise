@@ -81,7 +81,9 @@ public class WorkerService {
         if (!byId.isPresent()) {
             return new ApiResponse("this id not found", false);
         }
+        addressRepository.deleteById(byId.get().getAddress().getId());
         repository.deleteById(id);
+
         return new ApiResponse("successfully deleted", true);
     }
 }
